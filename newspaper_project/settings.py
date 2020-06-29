@@ -119,6 +119,8 @@ LANGUAGE_CODE = 'pt-br'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 TIME_ZONE = 'America/Fortaleza'
 
 USE_I18N = True
