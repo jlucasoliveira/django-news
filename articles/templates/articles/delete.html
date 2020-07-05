@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Excluir {{ object.title }}?{% endblock title %}
+
+{% block content %}
+    <h2>Excluir</h2>
+    <form method="post">
+        {% csrf_token %}
+        <p>Você tem certeza de que quer apagar o artigo "{{ object.title }}"</p>
+        <button class="btn btn-danger ml-2" type="submit">Confirmar</button>
+        <a href="{% url 'article:detail' object.pk %}">cancelar</a>
+    </form>
+{% endblock content %}

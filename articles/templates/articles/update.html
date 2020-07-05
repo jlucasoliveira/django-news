@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Atualizar {{ object.title }}{% endblock title %}
+
+{% block content %}
+    <h2>Editar</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-info ml-2" type="submit">Atualizar</button>
+        <a href="{% url 'article:detail' object.pk %}">cancelar</a>
+    </form>
+{% endblock content %}

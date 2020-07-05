@@ -1,3 +1,4 @@
 .idea/
 *.lock
 *.sqlite3
+__pycache__
